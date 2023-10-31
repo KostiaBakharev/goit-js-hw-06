@@ -14,7 +14,12 @@ const images = [
 ];
 
 const imgGallery = document.querySelector(".gallery");
-images.forEach((image) => {
-  const imgItem = `<li><img src="${image.url}" alt="${image.alt}"</li>`;
-  imgGallery.insertAdjacentHTML("beforeend", imgItem);
-});
+const items = images
+  .map(({ url, alt }) => `<li><img src="${url}" alt="${alt}" width="100%"</li>`)
+  .join("");
+imgGallery.insertAdjacentHTML("beforeend", items);
+
+imgGallery.style.listStyle = "none";
+imgGallery.style.display = "grid";
+imgGallery.style.gap = "15px";
+imgGallery.style.padding = "0";

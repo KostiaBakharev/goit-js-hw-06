@@ -13,16 +13,33 @@ const destroyBtn = document
 
 function createBoxes() {
   const amount = document.querySelector("input").value;
+
+  const arrBox = [];
   const boxContainer = document.getElementById("boxes");
+
   for (let i = 0; i < amount; i += 1) {
+    let sizeBox = 30 + i * 10;
+
     const box = document.createElement("div");
-    const sizeBox = 30 + i * 10;
     box.style.width = `${sizeBox}px`;
     box.style.height = `${sizeBox}px`;
     box.style.backgroundColor = getRandomHexColor();
-    boxContainer.appendChild(box);
+    arrBox.push(box);
   }
+
+  boxContainer.append(...arrBox);
 }
+// const amount = document.querySelector("input").value;
+// const boxContainer = document.getElementById("boxes");
+// for (let i = 0; i < amount; i += 1) {
+//   const box = document.createElement("div");
+//   const sizeBox = 30 + i * 10;
+//   box.style.width = `${sizeBox}px`;
+//   box.style.height = `${sizeBox}px`;
+//   box.style.backgroundColor = getRandomHexColor();
+//   boxContainer.insertAdjacentElement("beforeend", box);
+// }
+
 function destroyBoxes() {
   const boxContainer = document.getElementById("boxes");
   boxContainer.innerHTML = "";

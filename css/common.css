@@ -23,9 +23,9 @@ button {
   cursor: pointer;
 }
 
-.gallery {
-  list-style-type: none;
-  display: grid;
+/* .gallery {
+  /* list-style-type: none; */
+/* display: grid;
   gap: 15px;
   padding: 0;
 }
@@ -34,4 +34,4 @@ button {
 .gallery img {
   max-width: 100%;
   height: auto;
-}
+} */
