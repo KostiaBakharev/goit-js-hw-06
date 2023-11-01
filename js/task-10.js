@@ -44,4 +44,3 @@ function destroyBoxes() {
   const boxContainer = document.getElementById("boxes");
   boxContainer.innerHTML = "";
 }
-// commit
